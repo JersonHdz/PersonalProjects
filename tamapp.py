@@ -6,10 +6,17 @@ class venta():
     producto_Id = 0
     cantidad = 0
     precio = 0
+    costo_Final = 0
 
     def __init__(self,producto_Id,cantidad):
         self.producto_Id = producto_Id
         self.cantidad = cantidad
+
+    def cuenta_Final(self,costo):
+        self.costo_Final = self.costo_Final + costo
+        
+    def imprimir_Cuenta_Final(self):
+        print("La cuenta final es de: $",self.costo_Final)
 
     def levantar_Pedido(self):
         
@@ -31,7 +38,9 @@ class venta():
             self.precio = 45
 
         costo = self.precio * self.cantidad
-        print("Lleva:",self.cantidad,"de",self.nombre,"el monto a pagar es:",costo)
+        self.cuenta_Final(costo)
+        #print("Lleva:",self.cantidad,"de",self.nombre,"el monto a pagar es:",costo)
+        
         
 
 #inicio del codigo "principal"
@@ -43,10 +52,23 @@ print("3)Donas-----------------------$14 (c/u)")
 print("4)Champurrado grande (1 lt)---$90")
 print("5)Champurrado chico (1/2 lt)--$45")
 
-productoId = int(input("Que producto desea llevar?: "))
-cantidad = int(input("Cuantos desea llevar?: "))
-ventaVariable = venta(productoId,cantidad)
-ventaVariable.levantar_Pedido()
+pregunta = "s" #Variable para while
+
+while pregunta == "s":
+    productoId = int(input("Que producto desea llevar?: "))
+    cantidad = int(input("Cuantos desea llevar?: "))
+    ventaVariable = venta(productoId,cantidad)
+    ventaVariable.levantar_Pedido()
+    itera = int(input("Desea llevar algo mas? 1)Si 2)No"))
+    if  itera == 1:
+        ventaVariable.levantar_Pedido()
+    else: 
+        ventaVariable.imprimir_Cuenta_Final()
+        pregunta = "x"
+
+    
+
+
 
 
 
@@ -55,7 +77,7 @@ ventaVariable.levantar_Pedido()
 tamales = Productos("Tamales", 17,12)
 tamales.datos()
 tamales.calc_Costo()
-
+ 
 
 root = Tk()
 root.title("Tamapp")
