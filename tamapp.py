@@ -1,3 +1,19 @@
+from tkinter import *
+#Creacion de la ventana raiz y su logo
+ventana_Principal = Tk()
+ventana_Principal.geometry("289x537")
+icono = PhotoImage(file='tamapp_logo.png')
+ventana_Principal.iconphoto(True,icono)
+ventana_Principal.title("Tamapp")
+
+#Titulo principal de la aplicacion
+titulo_Principal = Label(ventana_Principal,text="Tamapp")
+titulo_Principal.grid(row=0,column=0)
+
+
+#Loop grafico
+ventana_Principal.mainloop()
+"""
 cuenta_total = 0
 class Producto():
     
@@ -56,3 +72,5 @@ while pregunta == True:
         pregunta = False
         print("La cuenta total es de:", cuenta_total)
         cuenta_total = 0
+
+"""
