@@ -8,8 +8,14 @@ ventana_Principal.title("Tamapp")
 
 #Titulo principal de la aplicacion
 titulo_Principal = Label(ventana_Principal,text="Tamapp")
-titulo_Principal.grid(row=0,column=0)
+titulo_Principal.grid(row=0,column=1)
 
+
+boton_Tamales = Button(ventana_Principal,text="Tamales").grid(row=1,column=0)
+boton_Pan = Button(ventana_Principal,text="Pan").grid(row=2,column=0)
+boton_Donas = Button(ventana_Principal,text="Donas").grid(row=3,column=0)
+boton_ChampurradoGde = Button(ventana_Principal,text="Champurrado Gde").grid(row=4,column=0)
+boton_ChampurradoChi = Button(ventana_Principal,text="Champurrado Chi").grid(row=5,column=0)
 
 #Loop grafico
 ventana_Principal.mainloop()
