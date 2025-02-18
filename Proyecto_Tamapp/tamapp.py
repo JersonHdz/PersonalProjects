@@ -15,18 +15,22 @@ titulo_Principal = Label(ventana_Principal,text="Tamapp")
 titulo_Principal.grid(row=0,column=1)
 
 #Funciones
-def ventana_Registro():
+def ventana_Productos():
     ventana = Toplevel(ventana_Principal)
     mensaje_Ventana_Registro = Label(ventana,text="Ventana de registro de productos")
     mensaje_Ventana_Registro.pack()
-    
+
+def ventana_Champurrados():
+    ventana = Toplevel(ventana_Principal)
+    mensaje_Ventana_Registro = Label(ventana,text="Ventana de registro de champurrados")
+    mensaje_Ventana_Registro.pack()
 
 #Alineacion de los botones
-boton_Tamales = Button(ventana_Principal,text="Tamales").grid(row=1,column=0)
-boton_Pan = Button(ventana_Principal,text="Pan", command=ventana_Registro).grid(row=2,column=0)
-boton_Donas = Button(ventana_Principal,text="Donas").grid(row=3,column=0)
-boton_ChampurradoGde = Button(ventana_Principal,text="Champurrado Gde").grid(row=4,column=0)
-boton_ChampurradoChi = Button(ventana_Principal,text="Champurrado Chi").grid(row=5,column=0)
+boton_Tamales = Button(ventana_Principal,text="Tamales",command=ventana_Productos,height=3,width=15).grid(row=1,column=0)
+boton_Pan = Button(ventana_Principal,text="Pan", command=ventana_Productos,height=3,width=15).grid(row=2,column=0)
+boton_Donas = Button(ventana_Principal,text="Donas",command=ventana_Productos,height=3,width=15).grid(row=3,column=0)
+boton_ChampurradoGde = Button(ventana_Principal,text="Champurrado Gde",command=ventana_Champurrados,height=3,width=15).grid(row=4,column=0)
+boton_ChampurradoChi = Button(ventana_Principal,text="Champurrado Chi",command=ventana_Champurrados,height=3,width=15).grid(row=5,column=0)
 
 
 
