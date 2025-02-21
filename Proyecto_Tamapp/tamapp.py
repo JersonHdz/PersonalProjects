@@ -1,21 +1,14 @@
 from tkinter import *
-from tkinter import ttk
+import os
 
+print(os.listdir())  # Muestra los archivos en el directorio actual
 
 #Creacion de la ventana raiz y su logo
 ventana_Principal = Tk()
-style = ttk.Style()
 ventana_Principal.geometry("289x537")
 icono = PhotoImage(file='tamapp_logo.png')
 ventana_Principal.iconphoto(True,icono)
 ventana_Principal.title("Tamapp")
-#Creacion de estilos
-style = ttk.Style()
-style.configure("TButton", 
-                font=("Arial", 12, "bold"), 
-                background="lightgray", 
-                foreground="blue", 
-                padding=5)
 
 #Titulo principal de la aplicacion
 titulo_Principal = Label(ventana_Principal,text="Tamapp")
@@ -33,11 +26,11 @@ def ventana_Champurrados():
     mensaje_Ventana_Registro.pack()
 
 #Alineacion de los botones
-boton_Tamales = ttk.Button(ventana_Principal,text="Tamales",command=ventana_Productos).grid(row=1,column=0)
-boton_Pan = ttk.Button(ventana_Principal,text="Pan", command=ventana_Productos).grid(row=2,column=0)
-boton_Donas = ttk.Button(ventana_Principal,text="Donas",command=ventana_Productos).grid(row=3,column=0)
-boton_ChampurradoGde = ttk.Button(ventana_Principal,text="Champurrado Gde",command=ventana_Champurrados).grid(row=4,column=0)
-boton_ChampurradoChi = ttk.Button(ventana_Principal,text="Champurrado Chi",command=ventana_Champurrados).grid(row=5,column=0)
+boton_Tamales = Button(ventana_Principal,text="Tamales",command=ventana_Productos,height=3,width=15).grid(row=1,column=0)
+boton_Pan = Button(ventana_Principal,text="Pan", command=ventana_Productos,height=3,width=15).grid(row=2,column=0)
+boton_Donas = Button(ventana_Principal,text="Donas",command=ventana_Productos,height=3,width=15).grid(row=3,column=0)
+boton_ChampurradoGde = Button(ventana_Principal,text="Champurrado Gde",command=ventana_Champurrados,height=3,width=15).grid(row=4,column=0)
+boton_ChampurradoChi = Button(ventana_Principal,text="Champurrado Chi",command=ventana_Champurrados,height=3,width=15).grid(row=5,column=0)
 
 
 
