@@ -12,13 +12,33 @@ ventana_Principal.title("Tamapp")
 
 #Titulo principal de la aplicacion
 titulo_Principal = Label(ventana_Principal,text="Tamapp")
-titulo_Principal.grid(row=0,column=1)
+titulo_Principal.grid(row=0,column=1,columnspan=3)
 
 #Funciones
 def ventana_Productos():
     ventana = Toplevel(ventana_Principal)
     mensaje_Ventana_Registro = Label(ventana,text="Ventana de registro de productos")
-    mensaje_Ventana_Registro.pack()
+    pantalla=Label(ventana,text="0").grid(row=0,column=0,columnspan=3)
+    boton_gde = Button(ventana,text="Gde",width=3).grid(row=0,column=3)
+    boton_ch = Button(ventana,text="Chi",width=3).grid(row=1,column=3)
+    
+    boton_numero7 = Button(ventana,text="7",width=3,height=1).grid(row=2,column=0)
+    boton_numero8 = Button(ventana,text="8",width=3,height=1).grid(row=2,column=1)
+    boton_numero9 = Button(ventana,text="9",width=3,height=1).grid(row=2,column=2)
+
+    boton_numero4 = Button(ventana,text="4",width=3,height=1).grid(row=3,column=0)
+    boton_numero5 = Button(ventana,text="5",width=3,height=1).grid(row=3,column=1)
+    boton_numero6 = Button(ventana,text="6",width=3,height=1).grid(row=3,column=2)
+
+    boton_numero1 = Button(ventana,text="1",width=3,height=1).grid(row=4,column=0)
+    boton_numero2 = Button(ventana,text="2",width=3,height=1).grid(row=4,column=1)
+    boton_numero3 = Button(ventana,text="3",width=3,height=1).grid(row=4,column=2)
+
+    boton_numero0 = Button(ventana,text="0",width=3,height=1).grid(row=5,column=1)
+
+    boton_delete = Button(ventana,text="Del",width=3,height=1).grid(row=2,column=3)
+    boton_ok = Button(ventana,text="OK",width=3,height=1).grid(row=3,column=3)
+
 
 def ventana_Champurrados():
     ventana = Toplevel(ventana_Principal)
