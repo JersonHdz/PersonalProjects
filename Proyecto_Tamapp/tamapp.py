@@ -18,7 +18,9 @@ titulo_Principal.grid(row=0,column=1,columnspan=3)
 def ventana_Productos():
     ventana = Toplevel(ventana_Principal)
     mensaje_Ventana_Registro = Label(ventana,text="Ventana de registro de productos")
-    pantalla=Label(ventana,text="0").grid(row=0,column=0,columnspan=3)
+    pantalla = Label(ventana, text="0", anchor="e", justify="right", width=20)  # Agregamos width para mayor efecto
+    pantalla.grid(row=0, column=0, columnspan=3)
+#    pantalla=Label(ventana,text="0", anchor="w", justify="left").grid(row=0,column=0,columnspan=3)
     boton_gde = Button(ventana,text="Gde",width=3).grid(row=0,column=3)
     boton_ch = Button(ventana,text="Chi",width=3).grid(row=1,column=3)
     
